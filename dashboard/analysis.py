@@ -5,12 +5,22 @@ Connects to the pipeline's DuckDB file and uses the synchronized_data_filtered t
 """
 
 import os
+import sys
 import duckdb
 import pandas as pd
 import numpy as np
 from sqlalchemy import create_engine, text
 from sqlalchemy.pool import NullPool
 import warnings
+
+# Needed to import config.settings below. Harmless when already on sys.path
+# (e.g. the local .bat launchers, which run "python -m streamlit" from the
+# project root and get this for free) - required when a host runs streamlit
+# some other way and never adds the project root itself (e.g. Streamlit
+# Community Cloud, which only puts dashboard/ on sys.path).
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
 
 try:
     import streamlit as st

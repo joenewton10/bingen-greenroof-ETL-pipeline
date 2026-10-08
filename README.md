@@ -2,7 +2,7 @@
 
 A production-style ETL pipeline and analytics dashboard that turns raw, multi-vendor environmental sensor exports into a statistically-analyzed time series of green roof cooling performance. Built for MSc thesis research on urban green roof thermal behavior.
 
-**Live demo:** [bingen-greenroof-etl-pipeline.streamlit.app](https://bingen-greenroof-etl-pipeline-4ads4zvvdgfzzc36labs6p.streamlit.app/)
+**Dashboard:** [bingen-greenroof-etl-pipeline.streamlit.app](https://bingen-greenroof-etl-pipeline-4ads4zvvdgfzzc36labs6p.streamlit.app/)
 **Note:** all data in this repository is synthetic — see [Data](#data) below.
 
 ![Overall thermal signal distribution](docs/screenshots/01_overall_signal.png)
